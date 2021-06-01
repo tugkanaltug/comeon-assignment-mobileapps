@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/gamesFragment">
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="comeon.demo.ui.GamesFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_gamesFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="comeon.demo.ui.DetailFragment">
+        <argument
+            android:name="item"
+            app:argType="comeon.demo.data.games.Games" />
+        <action
+            android:id="@+id/action_detailFragment_to_gamesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/gamesFragment" />
+    </fragment>
+</navigation>
