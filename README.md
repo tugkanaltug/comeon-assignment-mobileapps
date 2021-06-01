@@ -1,4 +1,4 @@
-# Comeon! Android Assignment
+# ComeOn! Android Assignment
 
 A sample casino games application and website.
 
